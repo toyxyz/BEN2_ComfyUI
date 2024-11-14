@@ -16,12 +16,12 @@ cd ComfyUI-BEN
 ```
 pip install -r requirements.txt
 ```
-Go to [BEN Huggingface page](https://huggingface.co/PramaLLC/BEN/tree/main) and download BEN_Base.pth
+Go to [BEN Huggingface page](https://huggingface.co/PramaLLC/BEN/tree/main) and download BEN_Base.pth, and model.py and place them inside:
 ```
-```
-cd ComfyUI-BEN
+...ComfyUI/custom-nodes/ComfyUI-BEN/
 ```
 The folder should look like this:
+```
 └── ComfyUI/custom-nodes/ComfyUI-BEN/
     ├── __init__.py
     ├── background_erase_network.py
