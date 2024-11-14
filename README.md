@@ -51,7 +51,7 @@ Outputs image of subject with alpha layer, combine with Image to Mask Node to ge
 
 ### OUTPUTS ARE NON-COMMERCIAL USE.
 
-While this is under an Apache 2.0 License, [PramaLLC](https://huggingface.co/PramaLLC/BEN) has restricted the use of their model from commercial use. Reach out to [PramaLLC](https://huggingface.co/PramaLLC/BEN) directly for more information. 
+While this is under an Apache 2.0 License, [PramaLLC](https://huggingface.co/PramaLLC/BEN) has restricted the use of their model from commercial use. Go to [PramaLLC](https://huggingface.co/PramaLLC/BEN) page for more information about their model and it's use restrictions.
 
 
 
