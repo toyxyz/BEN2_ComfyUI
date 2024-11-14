@@ -1,4 +1,4 @@
-# ComfyUI BEN (Background Erase Network)
+# ComfyUI BEN - Background Erase Network
 
 ****
 
