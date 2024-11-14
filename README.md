@@ -28,7 +28,7 @@ The folder should look like this:
     ├── ben.png
     ├── BEN_Base.pth
     ├── model.py
-    ├── readme.txt
+    ├── README.md
     └── requirements.txt
 ```
 ## Nodes
