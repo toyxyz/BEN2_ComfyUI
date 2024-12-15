@@ -48,10 +48,7 @@ Outputs image of subject with alpha layer, combine with Image to Mask Node to ge
 ⭐ If you like the project, please give it a star! ⭐
 
 ## License
+Apache 2.0 License
 
-### OUTPUTS ARE NON-COMMERCIAL USE.
-
-While this is under an Apache 2.0 License, [PramaLLC](https://huggingface.co/PramaLLC/BEN) has restricted the use of their model from commercial use. Go to the [PramaLLC](https://huggingface.co/PramaLLC/BEN) page for more information about their model use restrictions.
-
-
-
+### OUTPUTS CLEAR FOR COMMERCIAL USE
+[PramaLLC](https://www.reddit.com/r/comfyui/comments/1gq8nx0/comment/m2733hy/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button) - "You can use our BEN model commercially without any problem. Its under the Apache 2.0 license. The only commercial piece is the BEN+Refiner but the BEN_BASE is perfectly fine for commercial use. :)"
