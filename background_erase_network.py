@@ -3,20 +3,24 @@ import os
 import torch
 from PIL import Image
 from torchvision import transforms
+import cv2
+import numpy as np
 
-# Add the directory of the current file to sys.path
 script_directory = os.path.dirname(os.path.realpath(__file__))
 sys.path.append(script_directory)
-
-# Now import BEN_Base from model.py
-from model import BEN_Base
+import BEN2
 
 class BackgroundEraseNetwork:
-    def __init__(self):
-        self.model = BEN_Base()  # Initialize BEN_Base model
-        self.model.loadcheckpoints("./ComfyUI/custom_nodes/ComfyUI-BEN/BEN_Base.pth")  # Load the model weights
+    # Define these as class variables (outside of any method)
+    RETURN_TYPES = ("IMAGE",)
+    RETURN_NAMES = ("image",)
+    FUNCTION = "process"
+    CATEGORY = "BEN2"
 
-        # Define transformations for converting between PIL and Tensor
+    def __init__(self):
+        device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+        self.model = BEN2.BEN_Base().to(device).eval()
+        self.model.loadcheckpoints("./custom_nodes/ComfyUI-BEN/BEN2_Base.pth")
         self.to_pil = transforms.ToPILImage()
         self.to_tensor = transforms.ToTensor()
 
@@ -31,7 +35,7 @@ class BackgroundEraseNetwork:
     RETURN_TYPES = ("IMAGE",)
     RETURN_NAMES = ("image",)
     FUNCTION = "process_image"
-    CATEGORY = "BEN"
+    CATEGORY = "BEN2"
 
     def process_image(self, input_image):
         # Handle the input tensor format from ComfyUI
@@ -49,7 +53,7 @@ class BackgroundEraseNetwork:
             input_image = input_image.convert("RGBA")
 
         # Run inference to get the foreground image
-        _, foreground = self.model.inference(input_image)
+        foreground = self.model.inference(input_image)
 
         # Convert the foreground to tensor
         foreground_tensor = self.to_tensor(foreground)
@@ -65,5 +69,5 @@ NODE_CLASS_MAPPINGS = {
 }
 
 NODE_DISPLAY_NAME_MAPPINGS = {
-    "BackgroundEraseNetwork": "Background Erase Network"
+    "BackgroundEraseNetwork": "Background Erase Network Image"
 }
