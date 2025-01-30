@@ -3,7 +3,7 @@
 ****
 
 
-Remove backgrounds from images with [BEN](https://huggingface.co/PramaLLC/BEN) in [ComfyUI](https://github.com/comfyanonymous/ComfyUI)
+Remove backgrounds from images with [BEN2](https://huggingface.co/PramaLLC/BEN2) in [ComfyUI](https://github.com/comfyanonymous/ComfyUI)
 
 ## Installation
 
