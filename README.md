@@ -34,7 +34,7 @@ The folder should look like this:
 ## Nodes
 
 ### Background Erase Network
-![BEN2](ben2.png)
+![BEN2](BEN2.png)
 
 
 
