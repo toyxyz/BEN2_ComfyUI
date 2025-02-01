@@ -20,7 +20,8 @@ class BackgroundEraseNetwork:
     def __init__(self):
         device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
         self.model = BEN2.BEN_Base().to(device).eval()
-        self.model.loadcheckpoints("./custom_nodes/ComfyUI-BEN/BEN2_Base.pth")
+        checkpoint_path = os.path.join(script_directory, 'BEN2_Base.pth')
+        self.model.loadcheckpoints(checkpoint_path)
         self.to_pil = transforms.ToPILImage()
         self.to_tensor = transforms.ToTensor()
 
